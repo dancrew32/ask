@@ -35,7 +35,7 @@ $ ask "What's your favorite brand of sneakers?"
 
 ## Install
 ```bash
-sudo npm install phantomjs
+sudo npm install -g phantomjs
 git@github.com:dancrew32/ask.git
 cd ask && phantomjs ask.js "What is the meaning of life?"
 ```
