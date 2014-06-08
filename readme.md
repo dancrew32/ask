@@ -4,6 +4,8 @@ Ask a question to two strangers on Omegle and receive an array of responses in s
 
 ## Example
 
+### Input
+
 ```bash
 phantomjs ask.js "What is your favorite color?"
 ```
@@ -20,14 +22,7 @@ then just
 ask "What is your favorite color?"
 ```
 
-## Requirements
-```bash
-sudo npm install phantomjs
-git@github.com:dancrew32/ask.git
-cd ask && phantomjs ask.js "What is the meaning of life?"
-```
-
-## Notes
+### Output
 
 If no one responds to your question, the script dies with an empty array `[]`.
 
@@ -38,8 +33,17 @@ $ ask "What's your favorite brand of sneakers?"
 ["Stranger 1: wat are sneakers","Stranger 2: vans","Stranger 2: converse"]
 ```
 
-Just pipe this output into something else, 
-parse JSON, iterate and split with something like:
+## Install
+```bash
+sudo npm install phantomjs
+git@github.com:dancrew32/ask.git
+cd ask && phantomjs ask.js "What is the meaning of life?"
+```
+
+## Handling STDOUT
+
+Just pipe this output into another script, 
+parse as JSON, iterate and split with something like:
 
 ```javascript
 /(?P<name>Stranger.+?):(?P<response>.*)/
