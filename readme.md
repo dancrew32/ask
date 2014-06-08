@@ -20,6 +20,13 @@ then just
 ask "What is your favorite color?"
 ```
 
+## Requirements
+```bash
+sudo npm install phantomjs
+git@github.com:dancrew32/ask.git
+cd ask && phantomjs ask.js "What is the meaning of life?"
+```
+
 ## Notes
 
 If no one responds to your question, the script dies with an empty array `[]`.
@@ -32,4 +39,8 @@ $ ask "What's your favorite brand of sneakers?"
 ```
 
 Just pipe this output into something else, 
-parse JSON, iterate and split with `/(?P<name>Stranger.+?:)(?P<response>.*)/`
+parse JSON, iterate and split with something like:
+
+```javascript
+/(?P<name>Stranger.+?):(?P<response>.*)/
+```
